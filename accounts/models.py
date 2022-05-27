@@ -24,7 +24,7 @@ class CustomUser(AbstractUser):
     ]
     year = models.CharField(max_length=100, choices = YEAR_CHOICES, default= "1cp")
     email = models.EmailField(unique=True)
-    image = models.ImageField(blank=True, upload_to='')
+    image = models.ImageField(blank=True, upload_to='', default='default.jpg')
     computer_science = models.BooleanField(default = False)
     cyber_security = models.BooleanField(default = False)
     ai = models.BooleanField(default = False)

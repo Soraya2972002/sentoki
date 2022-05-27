@@ -1,3 +1,4 @@
+import operator
 from xmlrpc.client import DateTime
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
@@ -78,4 +79,100 @@ def interests_view(request):
                 User.objects.filter(id=id).update(cyclism=True)
         return redirect("home")
     return render(request, 'interests.html', {})
-    
+
+def matching_view(request):
+    users = User.objects.all()
+    print(users)
+    search_wilaya = request.POST.get('user_wilaya', None)
+    print(search_wilaya)
+    search_level = request.POST.get('level', None)
+    li = []
+    if search_wilaya != "0" and search_wilaya != None:
+        users = users.filter(wilaya = search_wilaya)
+        li.append(search_wilaya)
+    print(users)
+    if search_level != "0" and search_level != None:
+        users = users.filter(year = search_level)
+        li.append(search_level)
+    current_user = request.user
+    somme = 0
+    l = []
+    for user in users :
+        if user.id != current_user.id:
+            if user.computer_science == True and current_user.computer_science == True:
+                somme += 1
+            if user.cyber_security == True and current_user.cyber_security == True:
+                somme += 1
+            if user.ai == True and current_user.ai == True:
+                somme += 1
+            if user.design == True and current_user.design == True:
+                somme += 1
+            if user.it_systems == True and current_user.it_systems == True:
+                somme += 1
+            if user.iot == True and current_user.iot == True:
+                somme += 1
+            if user.software == True and current_user.software == True:
+                somme += 1
+            if user.data_science == True and current_user.data_science == True:
+                somme += 1
+            if user.networks == True and current_user.networks == True:
+                somme += 1
+            if user.books == True and current_user.books == True:
+                somme += 1
+            if user.movies == True and current_user.movies == True:
+                somme += 1
+            if user.music == True and current_user.music == True:
+                somme += 1
+            if user.signing == True and current_user.signing == True:
+                somme += 1
+            if user.mangas == True and current_user.mangas == True:
+                somme += 1
+            if user.animes == True and current_user.animes == True:
+                somme += 1
+            if user.series == True and current_user.series == True:
+                somme += 1
+            if user.drawing == True and current_user.drawing == True:
+                somme += 1
+            if user.hiking == True and current_user.hiking == True:
+                somme += 1
+            if user.football == True and current_user.football == True:
+                somme += 1
+            if user.tennis == True and current_user.tennis == True:
+                somme += 1
+            if user.cooking == True and current_user.cooking == True:
+                somme += 1
+            if user.basketball == True and current_user.basketball == True:
+                somme += 1
+            if user.handball == True and current_user.handball == True:
+                somme += 1
+            if user.volleyball == True and current_user.volleyball == True:
+                somme += 1
+            if user.fitness == True and current_user.fitness == True:
+                somme += 1
+            if user.jogging == True and current_user.jogging == True:
+                somme += 1
+            if user.cyclism == True and current_user.cyclism == True:
+                somme += 1
+            l .append([somme,user.id])
+    sorted_list = sorted(l, key=lambda x: x[1])
+    users = users.filter(username = '')
+    for element in sorted_list :
+        users = users.union(User.objects.filter(id = element[1]))
+    context = {
+        'users' : users,
+        'list' : li
+    }
+    return render(request, 'matching.html', context)
+
+def mentors_view(request):
+    users = User.objects.exclude(year = '1cp')
+    context = {
+        'users' : users
+    }
+    return render(request, 'mentors.html', context)
+def profile_view(request):
+    user = request.user
+    context = {
+        'user' : user
+    }
+    return render(request, 'profile.html', context)

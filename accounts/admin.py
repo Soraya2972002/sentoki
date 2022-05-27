@@ -33,16 +33,6 @@ class CustomUserAdmin(UserAdmin):
         "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',),
         }),
     )
-    """('Permissions', {
-            'fields': (
-                'is_active', 'is_staff', 'is_superuser',
-                'groups', 'user_permissions'
-                )
-        }),
-        ('Important dates', {
-            'fields': ('last_login', 'date_joined')
-        }),"""
-        #needs to be added lfo9 w lta7t
     add_fieldsets = (
         (None, {
             'fields': ('username', 'password1', 'password2'),'classes': ('wide',)
@@ -53,8 +43,6 @@ class CustomUserAdmin(UserAdmin):
         }),
         
     )
-    
-    search_fields = ('username',)
     form = UserChangeForm
     add_form = UserCreationForm
 

@@ -1,0 +1,8 @@
+{% for user in users %}
+    {% if user.is_authenticated %}
+        <p> authenticated </p>
+    {% endif %}
+    <a href = '#'> <img src="media/{{user.image}}" alt="blabla"> </a>
+    {{user.username}}
+    <a href = '#'> contact </a>
+{% endfor %}
