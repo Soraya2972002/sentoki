@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.base import TemplateView 
+from django.views.generic.base import TemplateView
+from django.conf.urls.static import static
+from sentoki_project import settings 
 
 admin.site.site_header = 'WorldExpress Administration'
 admin.site.site_title = "Welcome to WorldExpress"
@@ -28,5 +30,6 @@ urlpatterns = [
     #path('', TemplateView.as_view(template_name='home.html'),name='home'), 
     path('users/', include("authentication.urls")),
     #path('users/',include("django.contrib.auth.urls")),
-    path("",include('pages.urls'))
+    path("",include('pages.urls')),
+    path("",include('accounts.urls'))
 ]

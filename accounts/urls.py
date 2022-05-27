@@ -6,6 +6,7 @@ from sentoki_project import settings
 
 
 urlpatterns = [
-    path('', views.home_view, name='home'),
-    path('interests',views.interests_view,name = 'interests')
+    path('image', views.image_view, name = 'image_upload'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

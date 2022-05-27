@@ -20,7 +20,8 @@ class MyUserChangeForm(EmailRequiredMixin, UserChangeForm):
 
 class CustomUserAdmin(UserAdmin):
     list_display = (
-        'username', 'email', 'first_name', 'last_name', 'year'
+        'username', 'email', 'first_name', 'last_name', 'year','image','wilaya',"computer_science","cyber_security",
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',
         )
     exclude = ['Important dates',]
     fieldsets = (
@@ -28,7 +29,8 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('username',),'classes': ('wide',)
         }),
         ('Personal info', {
-            'fields': ('first_name', 'last_name', 'email','year'),
+            'fields': ('first_name', 'last_name', 'email','year','image','wilaya',"computer_science","cyber_security",
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',),
         }),
     )
     """('Permissions', {
@@ -46,7 +48,8 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('username', 'password1', 'password2'),'classes': ('wide',)
         }),
         ('Personal info', {
-            'fields': ('first_name', 'last_name', 'email','year')
+            'fields': ('first_name', 'last_name', 'email','year','image','wilaya',"computer_science","cyber_security",
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',)
         }),
         
     )
