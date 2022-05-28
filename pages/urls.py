@@ -19,6 +19,7 @@ urlpatterns = [
     path('personalities',views.personalities,name = 'personalities'),
     path('home2',views.home2,name = 'home2'),
     path('contact', views.contactus,name = 'contact'),
-    path('messagerie', views.messagerie,name = 'messagerie')
-
+    path('messagerie', views.messagerie,name = 'messagerie'),
+    path('homepage', views.homepage,name = 'homepage'),
+    path('discover', views.discover,name = 'discover'),
 ]

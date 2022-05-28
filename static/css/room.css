@@ -73,7 +73,7 @@ table {
 
 .picture{
     height: 25vh;
-    background: url('../img/Clutter-amico.png');
+    background: url('/static/image/Clutter-amico.png');
     background-color: #744FA1;
     background-position: 40% 50%;
     border-radius: 40px;

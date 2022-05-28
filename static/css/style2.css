@@ -15,12 +15,12 @@ body {
 	background-color: #f4f0ff;
 }
 
-.navbar-nav .nav-item {
+.nav-item {
 
-	padding-left: 9%;
+	padding-left: 5%;
 }
 
-.navbar-nav .nav-item  a {
+.nav-item  a {
 
 
   color: #744FA1 !important; 
@@ -168,14 +168,22 @@ body {
 
 	position: absolute;
 	left: 1%;
-	top: -5.5%;
+	top: -4.5%;
 }
 
 
 
 
+.NavBar {
+
+	display: grid;
+	grid-template-columns: 20% 80%;
+	gap: 5%;
+	margin-left: 5%;
+	margin-top: -1%;
 
 
+}
 
 
 

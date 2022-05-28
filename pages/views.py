@@ -228,3 +228,9 @@ def contactus(request):
 
 def messagerie(request):
     return render(request,'messagerie.html')
+
+def homepage(request):
+    return render(request,'homepage.html')
+
+def discover(request):
+    return render(request,'discover.html')

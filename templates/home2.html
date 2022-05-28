@@ -9,22 +9,68 @@
     <title>make friends</title>
 </head>
 <body>
+    <div class="NavBar">
+
+        <div class="Logo">
+    
+               <img  src="{% static 'images\3.png' %}" style="width:150px; height:150px;">
+    
+            
+        </div>
+    
+           <nav class="navbar navbar-expand-lg navbar-light">
+    
+    
+        <div class="container-fluid">
+    
+         
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+            <ul class="navbar-nav">
+              <li class="nav-item one">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'home2' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Community
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{% url 'discover' %}">Discover Tamazight</a></li>
+                  <li><a class="dropdown-item" href="{% url 'matching' %}">Get To know more friends</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <div class="circle"></div>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+    
+      </nav>
+    </div>
     <div class="main_container font_Poppins">
         <div class="container_content color1">
             <div class="text_container ">
-                <h3><a href="#" class="text1">Commun <br> intrest</a></h3>
+                <h3><a href="{% url 'interests' %}" class="text1">Commun <br> intrest</a></h3>
             </div>
             <div class="pictures_container pic1"></div>
         </div>
         <div class="container_content color2">
             <div class="text_container ">
-                <h3><a href="#" class="text2">Get a <br>roommate</a></h3>
+                <h3><a href="{% url 'matching' %}" class="text2">Get a <br>roommate</a></h3>
             </div>
             <div class="pictures_container pic2"></div>
         </div>
         <div class="container_content color3">
             <div class="text_container ">
-                <h3><a href="#" class="text3">Do you want a <br>mentor?</a> </h3>
+                <h3><a href="{% url 'mentors' %}" class="text3">Do you want a <br>mentor?</a> </h3>
             </div>
             <div class="pictures_container pic3"></div>
         </div>

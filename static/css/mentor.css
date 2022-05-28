@@ -73,7 +73,7 @@ table {
 
 .picture{
     height: 25vh;
-    background: url('../img/Tour_guide-bro.png');
+    background: url('/static/image/Tour_guide-bro.png');
     background-color: #744FA1;
     background-position: 40% 31%;
     border-radius: 40px;

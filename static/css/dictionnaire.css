@@ -73,7 +73,7 @@ table {
 
 .picture{
     height: 30vh;
-    background: url('../img/Learning_languages-rafiki.png') ;
+    background: url('/static/image/Learning_languages-rafiki.png') ;
     background-color: #744FA1;
     background-position: 40% 30%;
     border-radius: 40px;
