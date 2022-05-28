@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">     
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Dashboard</title>
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,200&family=Noto+Serif+Display:wght@100;200;300;400;600;800&family=Poppins:wght@100;200;500;700;900&family=Roboto:wght@100;300&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
+			    
+
+	</head>
+	<body>
+
+	<div class="logo">
+   	 		<img  src="{% static 'images\LOGO.png' %}" style="width:150px; height:150px;">
+
+   </div>		
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		  <div class="container-fluid">
+
+		   
+		    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+		      <ul class="navbar-nav">
+		        <li class="nav-item one">
+		          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Community
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		            <li><a class="dropdown-item" href="#">Action</a></li>
+		            <li><a class="dropdown-item" href="#">Another action</a></li>
+		            <li><a class="dropdown-item" href="#">Something else here</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Dashboard</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Contact us</a>
+		        </li>
+		        <li class="nav-item">
+		          <div class="circle"></div>
+		        </li>
+
+		      </ul>
+		    </div>
+		  </div>
+	</nav>
+
+    <div class="container-fluid">
+         
+         <div class="row row1"> 
+         	<div class="col-4">
+         	 <h1>Dash<span class="speacial">
+					board
+					<div class="line"></div>
+				</span></h1>
+            </div>
+         </div>
+
+         <div class="row Row2 my-5 ">
+
+         	<div class="col-4 ">
+
+         		<div class="pie-chart-container">
+              <canvas id="pie-chartcanvas-1"></canvas>
+              <br>
+           </div>
+         		
+         		
+         	</div>
+
+         	<div class="col-5">
+
+         		<div class="chart-container .chart-container1">
+              <canvas id="bar-chartcanvas"></canvas>
+            </div>
+        		
+         	</div>
+         	
+         </div>
+
+
+         <div class="row Row3 my-5 ">
+
+         	<div class="col-4 ">
+
+
+         		<div class="doughnut-chart-container">
+			        <canvas id="doughnut-chartcanvas-2"></canvas>
+			    </div>
+
+
+         		   		
+         	</div>
+
+         	<div class="col-5">
+
+					  <div class="chart-container .chart-container1">
+					    <canvas id="line-chartcanvas"></canvas>
+					  </div>
+         	
+         </div>
+
+       </div>
+
+     </div>
+
+      <div class="container-fluid">
+
+      	<div class="row Row5"> 
+      		<h1>Classement</h1>
+      	</div>
+
+      	<div class="row Row6"> 
+      		<div class="col-4"> 1 </div>
+      		
+      		<div class="col-4"> Username </div>
+      		<div class="col-4"> Score</div>
+      	</div>
+
+      	<div class="row Row7"> 
+      		<div class="col-4"> 1 </div>
+      		
+      		<div class="col-4"> Username </div>
+      		<div class="col-4"> Score</div>
+      	</div>
+
+      </div>  	
+
+
+    	
+
+
+
+
+
+  
+
+ <script src="{% static 'js/char/chartjs2-master/js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/char/chartjs2-master/js/Chart.min.js' %}"></script>
+  <script src="{% static 'js/char/chartjs2-master/js/pie.js' %}"></script>
+  <script src="{% static 'js/char/chartjs2-master/js/bar.js' %}"></script>
+  <script src="{% static 'js/char/chartjs2-master/js/line.js' %}"></script>
+
+  <script src="{% static 'js/char/chartjs2-master/js/doughnut.js' %}"></script>
+
+         
+
+
+	
+
+
+
+
+
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+	</body>
+</html>

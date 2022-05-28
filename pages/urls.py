@@ -9,6 +9,16 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('interests',views.interests_view,name = 'interests'),
     path('matching',views.matching_view,name = 'matching'),
-    path('profile',views.profile_view,name = 'profile'),
-    path('mentors',views.mentors_view,name = 'mentors'),
+    path('quizz',views.quizz,name = 'quizz'),
+    path('classement',views.classement,name = 'classement'),
+    path('dashboard',views.dashboard,name = 'dashboard'),
+    path('galerie',views.galerie,name = 'galerie'),
+    path('profile',views.profile,name = 'profile'),
+    path('mentors',views.mentors,name = 'mentors'),
+    path('culture',views.culture,name = 'culture'),
+    path('personalities',views.personalities,name = 'personalities'),
+    path('home2',views.home2,name = 'home2'),
+    path('contact', views.contactus,name = 'contact'),
+    path('messagerie', views.messagerie,name = 'messagerie')
+
 ]

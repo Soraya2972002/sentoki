@@ -164,15 +164,67 @@ def matching_view(request):
     }
     return render(request, 'matching.html', context)
 
-def mentors_view(request):
-    users = User.objects.exclude(year = '1cp')
+
+def quizz(request):
+    if request.method == 'POST':
+        choice_list = request.POST.getlist('selection')
+        somme = 0
+        for choice in choice_list :
+            if (choice == 1) or (choice == 5) or (choice == 9) or (choice == 13) or (choice == 19) or (choice == 22) or (choice == 28) :
+                somme += 1
+        user = request.user
+        id = user.id
+        users = User.objects.filter(id = id)
+        users.update(note_quizz = somme)
+        return redirect("dashboard")
+    return render(request, 'quizz.html')
+
+def classement(request):
+    users = User.objects.all()
+    l = []
+    for user in users :
+        l.append([user.note_quizz,user.id])
+    sorted_list = sorted(l, key=lambda x: x[1])
+    users = users.filter(username = '')
+    for element in sorted_list :
+        users = users.union(User.objects.filter(id = element[1]))
     context = {
-        'users' : users
+        'users' : users,
+        'range': range(1,11)
     }
-    return render(request, 'mentors.html', context)
-def profile_view(request):
+    return render(request, 'classement.html',context)
+
+def dashboard(request):
+    return render(request,'dashboard.html')
+
+def galerie(request):
+    return render(request,'galerie.html')
+
+def profile(request):
     user = request.user
     context = {
         'user' : user
     }
     return render(request, 'profile.html', context)
+
+def mentors(request):
+    users = User.objects.exclude(year = "1cp")
+    context = {
+        "users" : users
+    }
+    return render(request,'mentors.html',context)
+
+def culture(request):
+    return render(request,'kabyle_culture.html')
+
+def personalities(request):
+    return render(request,'kabyle_personalities.html')
+
+def home2(request):
+    return render(request,'home2.html')
+
+def contactus(request):
+    return render(request,'contactus.html')
+
+def messagerie(request):
+    return render(request,'messagerie.html')

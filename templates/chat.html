@@ -1,0 +1,19 @@
+{{userone}}
+<br>
+
+{% for message in currentmessages %}
+    {{message}}
+{% endfor %}
+
+<br>
+{{usertwo}}
+
+{% for message in other_messages %}
+    {{message}}
+{% endfor %}
+
+<form method="POST" action=""  name = 'new_message'>
+    {% csrf_token %}
+    <input type = "texte" name = 'new_message'>
+    <button type="submit" class = "filtrBtn">Connect</button>
+</form>

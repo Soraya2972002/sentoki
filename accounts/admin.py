@@ -21,16 +21,15 @@ class MyUserChangeForm(EmailRequiredMixin, UserChangeForm):
 class CustomUserAdmin(UserAdmin):
     list_display = (
         'username', 'email', 'first_name', 'last_name', 'year','image','wilaya',"computer_science","cyber_security",
-        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',"gender","note_quizz","id_conv"
         )
-    exclude = ['Important dates',]
     fieldsets = (
         (None, {
             'fields': ('username',),'classes': ('wide',)
         }),
         ('Personal info', {
             'fields': ('first_name', 'last_name', 'email','year','image','wilaya',"computer_science","cyber_security",
-        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',),
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism','gender',"note_quizz","id_conv"),
         }),
     )
     add_fieldsets = (
@@ -39,7 +38,7 @@ class CustomUserAdmin(UserAdmin):
         }),
         ('Personal info', {
             'fields': ('first_name', 'last_name', 'email','year','image','wilaya',"computer_science","cyber_security",
-        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism',)
+        "ai","it_systems","iot","software","data_science","networks","books","movies","music","signing","mangas","animes","series","drawing","hiking","football","tennis","cooking","basketball",'handball',"volleyball","fitness","jogging",'cyclism','gender',"note_quizz","id_conv")
         }),
         
     )

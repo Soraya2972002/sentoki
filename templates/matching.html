@@ -1,82 +1,126 @@
-<form method="POST" action="">
-    {% csrf_token %}
-    <div>
-        <select name="user_wilaya" id="wilaya_send">
-            <option value="0">La Wilaya </option>
-            <option value="Adrar">Adrar</option>
-            <option value="Chlef">Chlef</option>
-            <option value="Laghouat">Laghouat</option>
-            <option value="Oum el-Bouaghi"> Oum el-Bouaghi</option>
-            <option value="Batna">Batna</option>
-            <option value="Béjaïa">Béjaïa</option>
-            <option value="Biskra">Biskra</option>
-            <option value="Béchar">Béchar</option>
-            <option value="Blida">Blida</option>
-            <option value="Bouira">Bouira</option>
-            <option value="Tamanghasset">Tamanghasset</option>
-            <option value="Tébessa">Tébessa</option>
-            <option value="Tlemcen">Tlemcen</option>
-            <option value="Tiaret">Tiaret</option>
-            <option value="Tizi Ouzou">Tizi Ouzou</option>
-            <option value="Algiers">Algiers</option>
-            <option value="Djelfa">Djelfa</option>
-            <option value="Jijel">Jijel</option>
-            <option value="Sétif">Sétif</option>
-            <option value="Saïda">Saïda</option>
-            <option value="Skikda">Skikda</option>
-            <option value="Sidi Bel Abbes">Sidi Bel Abbes</option>
-            <option value="Annaba">Annaba</option>
-            <option value="Guelma">Guelma</option>
-            <option value="Constantine">Constantine</option>
-            <option value="Médéa">Médéa</option>
-            <option value="Mostaganem">Mostaganem</option>
-            <option value="M'Sila">M'Sila</option>
-            <option value="Mascara">Mascara</option>
-            <option value="Ouargla">Ouargla</option>
-            <option value="Oran">Oran</option>
-            <option value="El Bayadh">El Bayadh</option>
-            <option value="Illizi">Illizi</option>
-            <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
-            <option value="Boumerdès">Boumerdès</option>
-            <option value="El Taref">El Taref</option>
-            <option value="Tindouf">Tindouf</option>
-            <option value="Tissemsilt">Tissemsilt</option>
-            <option value="El Oued">El Oued</option>
-            <option value="Khenchela">Khenchela</option>
-            <option value="Souk Ahras">Souk Ahras</option>
-            <option value="Tipasa">Tipasa</option>
-            <option value="Mila">Mila</option>
-            <option value="Aïn Defla">Aïn Defla</option>
-            <option value="Naama">Naama</option>
-            <option value="Aïn Témouchent">Aïn Témouchent</option>
-            <option value="Ghardaïa">Ghardaïa</option>
-            <option value="Relizane">Relizane</option>
-        </select>
-    </div>
-    <div>
-        <select name="level" id="">
-            <option value="0">--level--</option>
-            <option value="1cp">1cp</option>
-            <option value="2cp">2cp</option>
-            <option value="1cs">1cs</option>
-            <option value="2cs">2cs</option>
-            <option value="3cs">3cs</option>
-        </select>
-    </div>
-    <div class="filtre_box_container">
-        <div>
-            <h4 id="text_font_titles"></h3>
+
+
+    <!DOCTYPE html>
+    {% load static %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/room.css' %}">
+        <title>Room Mate</title>
+    </head>
+    <body>
+        <div class="main_container font_Poppins">
+            <div class="picture_main_cotainer">
+                <div class="picture">
+                    
+                </div>
+                <div class="picture_text font_Poppins">
+                    <h3>search for your best room mate</h3>
+                </div>
+            </div>
+            <form method="POST" action="">
+                {% csrf_token %}
+            <div class="filter_container">
+                <div class="select_wilya">
+                    <select name="user_wilaya" id="wilaya_send">
+                        <option value="0">La Wilaya </option>
+                        <option value="Adrar">Adrar</option>
+                        <option value="Chlef">Chlef</option>
+                        <option value="Laghouat">Laghouat</option>
+                        <option value="Oum el-Bouaghi"> Oum el-Bouaghi</option>
+                        <option value="Batna">Batna</option>
+                        <option value="Béjaïa">Béjaïa</option>
+                        <option value="Biskra">Biskra</option>
+                        <option value="Béchar">Béchar</option>
+                        <option value="Blida">Blida</option>
+                        <option value="Bouira">Bouira</option>
+                        <option value="Tamanghasset">Tamanghasset</option>
+                        <option value="Tébessa">Tébessa</option>
+                        <option value="Tlemcen">Tlemcen</option>
+                        <option value="Tiaret">Tiaret</option>
+                        <option value="Tizi Ouzou">Tizi Ouzou</option>
+                        <option value="Algiers">Algiers</option>
+                        <option value="Djelfa">Djelfa</option>
+                        <option value="Jijel">Jijel</option>
+                        <option value="Sétif">Sétif</option>
+                        <option value="Saïda">Saïda</option>
+                        <option value="Skikda">Skikda</option>
+                        <option value="Sidi Bel Abbes">Sidi Bel Abbes</option>
+                        <option value="Annaba">Annaba</option>
+                        <option value="Guelma">Guelma</option>
+                        <option value="Constantine">Constantine</option>
+                        <option value="Médéa">Médéa</option>
+                        <option value="Mostaganem">Mostaganem</option>
+                        <option value="M'Sila">M'Sila</option>
+                        <option value="Mascara">Mascara</option>
+                        <option value="Ouargla">Ouargla</option>
+                        <option value="Oran">Oran</option>
+                        <option value="El Bayadh">El Bayadh</option>
+                        <option value="Illizi">Illizi</option>
+                        <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+                        <option value="Boumerdès">Boumerdès</option>
+                        <option value="El Taref">El Taref</option>
+                        <option value="Tindouf">Tindouf</option>
+                        <option value="Tissemsilt">Tissemsilt</option>
+                        <option value="El Oued">El Oued</option>
+                        <option value="Khenchela">Khenchela</option>
+                        <option value="Souk Ahras">Souk Ahras</option>
+                        <option value="Tipasa">Tipasa</option>
+                        <option value="Mila">Mila</option>
+                        <option value="Aïn Defla">Aïn Defla</option>
+                        <option value="Naama">Naama</option>
+                        <option value="Aïn Témouchent">Aïn Témouchent</option>
+                        <option value="Ghardaïa">Ghardaïa</option>
+                        <option value="Relizane">Relizane</option>
+                    </select>
+                </div>
+                <div class="select_wilya">
+                    <select name="level" id="">
+                        <option value="0">--level--</option>
+                        <option value="1cp">1cp</option>
+                        <option value="2cp">2cp</option>
+                        <option value="1cs">1cs</option>
+                        <option value="2cs">2cs</option>
+                        <option value="3cs">3cs</option>
+                    </select>
+                </div>
+                <div class="filtrBtn">
+                    <button type="submit" class="font_Poppins">filter</button>
+                </form>
+                </div>
+            </div>
+            
+            <div class="profil_container font_Poppins">
+                <!--first culumn-->
+                {% for instance in users %}
+                <div class="profil">
+                    <div class="profil_img">
+                        <img src="media/{{instance.image}}" alt="blabla">
+                    </div>
+                    <div class="profile_btn">
+                        <h3>{{instance.username }}</h3>
+                        <form method="POST" action="/chat"  name = 'submit'>
+                            {% csrf_token %}
+                            <button type="submit" value = '{{instance.id}}' class = "filtrBtn" name = 'submit_button'>Connect</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="swip_container">
+                <div class="swip_num">
+                    <h3 class="list_num list_selected">1</h3>
+                    <h3 class="list_num">2</h3>
+                    <h3 class="list_num">3</h3>
+                    <h3 class="list_num">4</h3>
+                    <h3 class="list_num">5</h3>
+                </div>
+            </div>
         </div>
-        {% for item in list %}
-        <div>
-            <p>{{ item }}</p>
-        </div>   
-        {% endfor %}
-    </div>
-    <button type="submit" class = "filtrBtn">Filter</button>
-    </form>
-    {% for instance in users %}
-        {{instance.username }}
-        <a href = '#'> <img src="media/{{instance.image}}" alt="blabla"> </a>
-        <a href = '#'> connect </a>
-    {% endfor %}
+        <script src="{% static 'js/room.js' %}"></script>
+    </body>
+    </html>

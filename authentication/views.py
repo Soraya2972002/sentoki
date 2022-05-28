@@ -66,7 +66,7 @@ def signup(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.set_password(pass1)
-        myuser.is_active = False
+        #myuser.is_active = False
         myuser.save()
         current_site = get_current_site(request)
         email_subject = "Activate your account"

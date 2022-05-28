@@ -22,9 +22,14 @@ class CustomUser(AbstractUser):
         ('2cs', '2cs'),
         ('3cs', '3cs'),
     ]
+    Genders = [
+        ('homme', 'homme'),
+        ('femme', 'femme'),
+    ]
+    gender = models.CharField(max_length=100, choices = Genders, default= "homme")
     year = models.CharField(max_length=100, choices = YEAR_CHOICES, default= "1cp")
     email = models.EmailField(unique=True)
-    image = models.ImageField(blank=True, upload_to='', default='default.jpg')
+    image = models.ImageField(blank=True, upload_to='', default='media/default.jpg')
     computer_science = models.BooleanField(default = False)
     cyber_security = models.BooleanField(default = False)
     ai = models.BooleanField(default = False)
@@ -52,3 +57,5 @@ class CustomUser(AbstractUser):
     fitness = models.BooleanField(default = False)
     jogging = models.BooleanField(default = False)
     cyclism = models.BooleanField(default = False)
+    note_quizz = models.DecimalField(max_digits=10, decimal_places=0, default = 0)
+    id_conv = models.DecimalField(max_digits=10, decimal_places=0, default = 0)

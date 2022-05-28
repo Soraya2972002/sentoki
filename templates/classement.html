@@ -1,0 +1,8 @@
+{% for user in "users"|ljust:"10" %}
+        <img src="media/{{user.image}}" alt="blabla">
+        {{user.username}}
+        {{user.note_quizz}}
+    {% if user == '' %}
+        {{break}}
+    {% endif %}
+{% endfor %}

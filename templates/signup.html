@@ -127,6 +127,15 @@
                     </select>
                 </div>
             </div>
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-envelope" ></i>
+                    <select  class="form-control" id="gender" name="gender">
+                        <option value="femme">femme</option>
+                        <option value="homme">homme</option>
+                    </select>
+                </div>
+            </div>
             <div class="first_last_container input-field">
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
@@ -149,5 +158,77 @@
    </div>       
     
 </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>sign/log</title>
+</head>
+<body>
+    <div class="main_container font_Poppins">
+        <div class="second_container">
+            <div class="form_container">
+                <div class="name_container">
+                    <h3>Sign UP</h3>
+                </div>
+                <div class="input_container">
+                    <div class="first-patr_signup">
+                        <div class="two_part">
+                            <div>
+                                <label for="username">username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Create A Username (only letters and numbers)" Required>
+                            </div>
+                            <div>
+                                <label for="last_name">Last name</label>
+                                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" Required>
+                            </div>
+                        </div>
+                        <div class="one_part">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" Required>
+                        </div>
+                        <div class="two_part select_part">
+                            <div>
+                                <label for="Gender">Gender</label>
+                                <select  class="form-control" id="gender" name="gender">
+                                    <option value="femme">femme</option>
+                                    <option value="homme">homme</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="last_name">level</label>
+                                <select  class="form-control" id="year" name="year">
+                                    <option value="1cp">1cp</option>
+                                    <option value="2cp">2cp</option>
+                                    <option value="1cs">1cs</option>
+                                    <option value="2cs">2cs</option>
+                                    <option value="3cs">3cs</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="password second-part_signup">
+                        <div>
+                            <label for="password">password</label>
+                            <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
+                        </div>
+                        <div>
+                            <label for="password1">Password confirmation</label>
+                            <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required>
+                        </div>                          
+                    </div>
+                    <div class="logBtn">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

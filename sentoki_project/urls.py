@@ -31,5 +31,7 @@ urlpatterns = [
     path('users/', include("authentication.urls")),
     #path('users/',include("django.contrib.auth.urls")),
     path("",include('pages.urls')),
-    path("",include('accounts.urls'))
+    path("",include('accounts.urls')),
+    path("",include('voice_messge.urls')),
+    path('', include('chat.urls')),
 ]

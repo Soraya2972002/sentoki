@@ -1,64 +1,50 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Express Login</title>
-    <link rel="stylesheet" href="{% static "css/login.css" %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Lato:wght@300&family=Paytone+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>sign/log</title>
 </head>
 <body>
-<div class="container">
-   <div class="forms-container">
-      <div class="signin-signup">
-         <form method="post" action="" class="sign-in-form">
-            <h2 class="title" id="text_font_titles">Sign in </h2>
-            {% csrf_token %}
-            <div class="input-field">
-               <i class="fas fa-user"></i>
-               <input type="text" class="form-control" id="username" name="username" placeholder="Username" Required>
+    <div class="main_container font_Poppins">
+        <div class="second_container">
+            <div class="form_container">
+                <div class="name_container">
+                    <h3>gt estin</h3>
+                </div>
+                <div class="input_container">
+                    <div>
+                        <label for="username">username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" Required>
+                    </div>
+                    <div class="password">
+                        <label for="password">password</label>
+                        <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Password" Required>
+                        <div>
+                            <a href="{% url 'password_reset' %}">forget your password?</a>
+                        </div>
+                    </div>
+                    <div class="logBtn">
+                        <button type="submit">Sign In</button>
+                    </div>
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert"> {{ message }}
+                        </div>
+                     {% endfor %}
+                </div>
             </div>
-            <div class="input-field">
-               <i class="fas fa-lock"></i>
-               <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Password" Required>
+            <div class="sidepart_container">
+                <div class="picture_container"></div>
+                <div class="text_container">
+                    <h3>sign in</h3>
+                </div>
             </div>
-            {% for message in messages %}
-               <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert"> {{ message }}
-               </div>
-            {% endfor %}
-            <div class="submit_btn">
-               <button type="submit" class="btn solid">Log In</button>
-               <a href="{% url 'password_reset' %}"><i>Forgot Password?</i></a>
-            </div>
-         </form> 
-      </div> 
-   </div>       
-
-   <div class="panels-container">
-       <div class="panel left-panel">
-          <div class="content">
-             <h1 id="text_font_titles">New Here ?</h1>
-             <p>Create your account</p>
-             <button class="btn transparent" id="sign-up-button"><a href="{% url 'signup' %}">Sign Up</a> </button>
-          </div>
-       </div>
-   </div>
-</div>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
-
-
 
 

@@ -1,7 +1,151 @@
-<img src="media/{{user.image}}" alt="blabla">
-{{user.username}}
-{{user.first_name}}
-{{user.last_name}}
-{{user.year}}
-{{user.wilaya}}
-{{ form.computer_science.value }}
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">     
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Profile</title>
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,200&family=Noto+Serif+Display:wght@100;200;300;400;600;800&family=Poppins:wght@100;200;500;700;900&family=Roboto:wght@100;300&family=Work+Sans:wght@300;400;600;800&display=swap" rel="stylesheet"> 
+			    
+
+	</head>
+	<body>
+<div class="logo">
+   	 		<img  src="{% static 'images\LOGO.png' %}" style="width:150px; height:150px;">
+
+   </div>		
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		  <div class="container-fluid">
+
+		   
+		    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+		      <ul class="navbar-nav">
+		        <li class="nav-item one">
+		          <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Community
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		            <li><a class="dropdown-item" href="#">Action</a></li>
+		            <li><a class="dropdown-item" href="#">Another action</a></li>
+		            <li><a class="dropdown-item" href="#">Something else here</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Dashboard</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Contact us</a>
+		        </li>
+		        <li class="nav-item">
+		          <div class="circle"></div>
+		        </li>
+
+		      </ul>
+		    </div>
+		  </div>
+	</nav>
+
+	<div class="container-md my-5 ">
+
+		<div class="row my-5  justify-content-center">
+
+			<div class="col-4 mx-5">
+				<div class="circle1">
+					<img src="media/{{user.image}}" alt="blabla">
+					
+				</div>
+                <form method="POST" enctype="multipart/form-data" action="updateimage/{{ user.id }}">
+                    {% csrf_token %}
+                     <input class="form-control" type = "file" name = "image">
+                     <button type="submit" >Upload Image</button>
+                </form>
+			</div>
+			<div class="col-5 mx-5">
+				<h1>Personal <span class="speacial">
+					Informations
+					<div class="line"></div>
+				</span></h1>
+			</div>
+			
+		</div>
+
+		<div class="row row2">
+
+			<div class="info">
+
+				<p>{{user.username}}</p>
+				<p>{{user.gender}}</p>
+				<p>{{user.email}}</p>
+				<p>{{user.year}}</p>
+				
+			</div>
+
+		</div>
+
+
+			
+		</div>
+
+		<div class="container-md my-5 ">
+
+			<div class="row row5 mx-5 ">
+
+				<div class="col-3">IT Systems</div>
+				<div class="col-3">Drawing</div>
+				<div class="col-3">Dancing</div>
+				<div class="col-3">Football</div>
+
+				
+			</div>
+
+	    
+
+		<div class="row row6 mx-5 ">
+
+				<div class="col-3">Fiteness</div>
+				<div class="col-3">Design</div>
+				<div class="col-3">Books</div>
+
+				
+		</div>
+
+		<div class="row row7 mx-5 ">
+
+				<div class="col-3">Cooking</div>
+				<div class="col-3">Data Science</div>
+				<div class="col-3">Jogging</div>
+
+				
+		</div>
+
+		<div class="row">
+
+		   <button class="mod">Modify Informations</button>
+
+		</div>
+
+	    </div>			
+		
+	</div>
+	
+
+
+
+
+
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+	</body>
+</html>

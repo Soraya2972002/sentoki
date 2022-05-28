@@ -82,10 +82,10 @@ body{
 
 }
 
-.img1 {
+.rectangle img {
    position: relative;
    top: -15%;
-   right: 18%;
+   right: 35%;
    width: 800px;
    height: 800px;
 }
@@ -105,8 +105,8 @@ body{
 img {
 
    position: absolute;
-   top: 1%;
-   left: 2%;
+   top: 1.5%;
+   left: 3%;
 
 }
 
@@ -171,7 +171,13 @@ img {
    }
 
 
+.L {
+
+   position: absolute;
+   top: -4%;
 
 
-  
+
+}
+
 

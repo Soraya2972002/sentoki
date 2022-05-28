@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from pathlib import Path
+from re import A
 from . info import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -50,6 +51,9 @@ INSTALLED_APPS = [
     'authentication',
     "pages",
     'accounts',
+    'voice_messge',
+    'chat',
+
 ]
 
 MIDDLEWARE = [
@@ -132,10 +136,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
