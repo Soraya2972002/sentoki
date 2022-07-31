@@ -50,6 +50,8 @@ table {
 	border-spacing: 0;
 }
 
+
+
 .main_container{
     height: 200vh;
     width: 100%;
@@ -57,7 +59,7 @@ table {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 10px;
     position: relative;
 }
 
@@ -73,7 +75,7 @@ table {
 
 .picture{
     height: 25vh;
-    background: url('/static/image/Clutter-amico.png');
+    background: url('/static/images/Clutter-amico.png');
     background-color: #744FA1;
     background-position: 40% 50%;
     border-radius: 40px;
@@ -88,7 +90,7 @@ table {
     width: 100%;
     overflow: none;
     z-index: 1;
-   display: none;
+    display: none;
 }
 
 .picture_text{

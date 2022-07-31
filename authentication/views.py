@@ -126,7 +126,7 @@ def signin(request):
         
         if user is not None:
             login(request, user)
-            return render(request, "home.html")
+            return redirect('dashboard')
             # messages.success(request, "Logged In Sucessfully!!")
         else:
             messages.error(request, "Bad Credentials!!")

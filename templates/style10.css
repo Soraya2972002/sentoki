@@ -1,0 +1,144 @@
+
+.Lines {
+
+
+	position: absolute;
+    top: -5% ;
+    left: 8%;
+    z-index: -5;
+}
+
+.rOw1 .col-4 {
+
+   margin-left: 37% !important;
+   margin-top: 1%;
+   color: #744FA1;
+}
+
+.rOw1 .col-4 h1 {
+
+    letter-spacing: 4px;
+
+
+}
+
+.rOw2 .col-5 {
+
+    height: 700px;
+    width: 600px;
+    background-color: #e7dffd;
+    margin-left:55% !important;
+    margin-top: 1% !important;
+    border: 1px solid #744FA1;
+    border-radius: 25px ;
+    position: absolute;
+}
+
+.rOw2 .col-5 .IN {
+
+
+     position: relative;
+     top: 0;
+     width: 100%;
+     border: 1px solid #744FA1;
+     border-radius: 25px;
+     height: 6%;
+     padding-top:1%;
+
+
+
+}
+
+.message_container{
+    height: 90%;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: scroll;
+}
+
+.message_container p{
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+
+.send{
+    width: 80%;
+    background-color: #744FA1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.res h1{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.res{
+    width: 80%;
+    align-self: flex-end;
+    margin: 5px 0px;
+    background-color: #744FA1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+button,
+input {
+
+    background-color: transparent;
+    border: none;
+
+}
+input {
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

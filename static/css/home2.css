@@ -60,6 +60,11 @@ table {
     align-content: center;
     justify-content: center;
     column-gap: 50px;
+    margin-top: 10px;
+}
+
+.text_container  a{
+    text-decoration: none;
 }
 
 .container_content{
@@ -113,16 +118,16 @@ table {
 
 
 .pic1{
-    background: url('/static/image/Mobile_user-rafiki.png') no-repeat center;
+    background: url('/static/images/Mobile_user-rafiki.png') no-repeat center;
 	background-size: cover;
 }
 
 .pic2{
-    background: url('/static/image/True_friends-rafiki.png') no-repeat center;
+    background: url('/static/images/True_friends-rafiki.png') no-repeat center;
 	background-size: cover;
 }
 
 .pic3{
-    background: url('/static/image/Learning-rafiki.png') no-repeat center;
+    background: url('/static/images/Learning-rafiki.png') no-repeat center;
 	background-size: cover;
 }

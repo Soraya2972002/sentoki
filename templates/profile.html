@@ -70,13 +70,13 @@
 
 			<div class="col-4 mx-5">
 				<div class="circle1">
-					<img src="media/{{user.image}}" alt="blabla">
+					<img src="media/{{user.image}}" >
 					
 				</div>
                 <form method="POST" enctype="multipart/form-data" action="updateimage/{{ user.id }}">
                     {% csrf_token %}
-                     <input class="form-control" type = "file" name = "image">
-                     <button type="submit" >Upload Image</button>
+                     <input class="form-control" type = "file" name = "image" style="background-color:transparent ; padding : 5px ; border : 1px solid black ; border-radius : 20px ; margin-top : 5% ; margin-bottom : 2% ; width : 70%" >
+                     <button type="submit" style="background-color:transparent ; padding : 5px ; border : 1px solid black ; border-radius : 20px; margin-top : 2% ; margin-bottom : 2%" >Upload Image</button>
                 </form>
 			</div>
 			<div class="col-5 mx-5">

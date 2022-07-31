@@ -8,19 +8,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'css/room.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/style2.css"%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <title>Room Mate</title>
     </head>
     <body>
         <div class="NavBar">
 
 			<div class="Logo">
-		
 				   <img  src="{% static 'images\3.png' %}" style="width:150px; height:150px;">
-		
-				
 			</div>
 		
-			   <nav class="navbar navbar-expand-lg navbar-light">
+			<nav class="navbar navbar-expand-lg navbar-light">
 		
 		
 			<div class="container-fluid">
@@ -143,7 +142,7 @@
                 {% for instance in users %}
                 <div class="profil">
                     <div class="profil_img">
-                        <img src="media/{{instance.image}}" alt="blabla">
+                        <img src="media/{{instance.image}}" alt="profile picture">
                     </div>
                     <div class="profile_btn">
                         <h3>{{instance.username }}</h3>

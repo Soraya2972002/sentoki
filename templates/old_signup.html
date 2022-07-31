@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" href="{% static "css/sign.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Lato:wght@300&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>  
+</head>
+<body>
+<div class="container">
+   <div class="forms-container">
+      <div class="signin-signup"> 
+        <div class="title">
+            <h2>Sign up</h2>
+        </div>
+         <form method="post" action="" class="sign-in-form">
+            {% csrf_token %}
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Create A Username (only letters and numbers)" Required>
+                </div>
+                
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">  
+                   {% if 'username' in message.tags %}{{ message }}
+                   {% endif %}
+                </div>
+               {% endfor %}
+            </div>
+            <div class="first_last_container input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" Required>
+            </div>
+            <div class="first_last_container input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" Required>
+            </div>
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-envelope" ></i>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" Required>
+                </div>
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">  
+                       {% if 'email' in message.tags %}{{ message }}
+                       {% endif %}
+                    </div>
+               {% endfor %}
+            </div>
+            div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-envelope" ></i>
+                    <select  class="form-control" id="wilaya" name="wilaya">
+                        <option value="0">-- Select Wilaya --</option>
+                        <option value="Adrar">Adrar</option>
+                        <option value="Chlef">Chlef</option>
+                        <option value="Laghouat">Laghouat</option>
+                        <option value="Oum el-Bouaghi"> Oum el-Bouaghi</option>
+                        <option value="Batna">Batna</option>
+                        <option value="6">Béjaïa</option>
+                        <option value="7">Biskra</option>
+                        <option value="8">Béchar</option>
+                        <option value="9">Blida</option>
+                        <option value="10">Bouira</option>
+                        <option value="11">Tamanghasset</option>
+                        <option value="12">Tébessa</option>
+                        <option value="13">Tlemcen</option>
+                        <option value="14">Tiaret</option>
+                        <option value=" 15">Tizi Ouzou</option>
+                        <option value="16">Algiers</option>
+                        <option value="17">Djelfa</option>
+                        <option value="18">Jijel</option>
+                        <option value="19">Sétif</option>
+                        <option value="20">Saïda</option>
+                        <option value="21">Skikda</option>
+                        <option value="22">Sidi Bel Abbes</option>
+                        <option value="23">Annaba</option>
+                        <option value="24">Guelma</option>
+                        <option value="25">Constantine</option>
+                        <option value="26">Médéa</option>
+                        <option value="27">Mostaganem</option>
+                        <option value="28">M'Sila</option>
+                        <option value="29">Mascara</option>
+                        <option value="30">Ouargla</option>
+                        <option value="30">Oran</option>
+                        <option value="32">El Bayadh</option>
+                        <option value="33">Illizi</option>
+                        <option value="34">Bordj Bou Arréridj</option>
+                        <option value="35">Boumerdès</option>
+                        <option value="36">El Taref</option>
+                        <option value="37">Tindouf</option>
+                        <option value="38">Tissemsilt</option>
+                        <option value="39">El Oued</option>
+                        <option value="40">Khenchela</option>
+                        <option value="40">Souk Ahras</option>
+                        <option value="41">Souk Ahras</option>
+                        <option value="42">Tipasa</option>
+                        <option value="43">Mila</option>
+                        <option value="44">Aïn Defla</option>
+                        <option value="45">Naama</option>
+                        <option value="46">Aïn Témouchent</option>
+                        <option value="47">Ghardaïa</option>
+                        <option value="48">Relizane</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-envelope" ></i>
+                    <select  class="form-control" id="year" name="year">
+                        <option value="1cp">1cp</option>
+                        <option value="2cp">2cp</option>
+                        <option value="1cs">1cs</option>
+                        <option value="2cs">2cs</option>
+                        <option value="3cs">3cs</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-envelope" ></i>
+                    <select  class="form-control" id="gender" name="gender">
+                        <option value="femme">femme</option>
+                        <option value="homme">homme</option>
+                    </select>
+                </div>
+            </div>
+            <div class="first_last_container input-field">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
+            </div>
+            <div class="input_container">
+                <div class="input-field">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required>
+                </div>
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">  
+                        {% if 'pass' in message.tags %} {{ message }}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+      </div>
+   </div>       
+    
+</div>
+</body>
+</html>

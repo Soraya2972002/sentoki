@@ -57,7 +57,7 @@ table {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 10px;
     position: relative;
 }
 
@@ -73,7 +73,7 @@ table {
 
 .picture{
     height: 25vh;
-    background: url('/static/image/Tour_guide-bro.png');
+    background: url('/static/images/Tour_guide-bro.png');
     background-color: #744FA1;
     background-position: 40% 31%;
     border-radius: 40px;

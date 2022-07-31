@@ -22,7 +22,7 @@ body{
 .rectangle {
 
 	position: absolute;
-	right: -3%;
+	right: -4%;
 	top: 17%;
 	border-radius:30px;
 	width: 800px;
@@ -45,7 +45,7 @@ body{
 .nav-item {
 
    padding-right: 8px;
-   padding-left: 8px;
+   padding-left: 5px;
    background-color: transparent;
    border-radius: 25px;
    position:absolute ;
@@ -55,13 +55,13 @@ body{
 
 .one {
 
-   right: -45%;
+   right: -48%;
    transition: 0.4s linear;
 
 }
 .tow {
 
-   right: -60%;
+   right: -65%;
    transition: 0.4s linear;
 
 }

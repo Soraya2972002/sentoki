@@ -186,7 +186,7 @@ table {
 }
 
 .picture_container{
-    background: url('../img/Mobile_user-rafiki.png') no-repeat center;
+    background: url('/static/images/Mobile_user-rafiki.png') no-repeat center;
 	background-size: cover;
     height: 60%;
     width: 50%;

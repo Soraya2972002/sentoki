@@ -57,7 +57,7 @@ table {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 10px;
     position: relative;
 }
 
@@ -70,6 +70,8 @@ table {
     flex-direction: column;
     z-index: 15;
 }
+
+
 
 .picture{
     height: 30vh;
@@ -334,6 +336,7 @@ table {
 
 .spaceBtn .effacer{
     width: 100px;
+    display: none;
 }
 /*
 .text_zone::after{

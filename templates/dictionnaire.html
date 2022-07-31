@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>here</p>
-    {% for audio in audios  %}
-    {{audio}}
-    {{audio.record}}
-    media/{{audio.record}}
-    <audio controls>
-        <source src="media/{{audio.record}}" type="audio/mp3">
-    </audio>  
-    {% endfor %}
-</body>
-</html>
+
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/dictionnaire.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style2.css"%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>  
     <title>transition</title>
 </head>
@@ -40,6 +24,60 @@
     <title>translate</title>
 </head>
 <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/interests.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style2.css"%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <title>Your Intrests</title>
+</head>
+<body>
+    <div class="NavBar">
+
+        <div class="Logo">
+    
+               <img  src="{% static 'images\3.png' %}" style="width:150px; height:150px;">
+    
+            
+        </div>
+    
+           <nav class="navbar navbar-expand-lg navbar-light">
+    
+    
+        <div class="container-fluid">
+    
+         
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+            <ul class="navbar-nav">
+              <li class="nav-item one">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'home2' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Community
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{% url 'discover' %}">Discover Tamazight</a></li>
+                  <li><a class="dropdown-item" href="{% url 'matching' %}">Get To know more friends</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <div class="circle"></div>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+    
+      </nav>
+    </div>
+    
     <div class="main_container font_Poppins">
         <div class="picture_main_cotainer">
             <div class="picture"></div>
@@ -165,7 +203,7 @@
                 </div>
                 <div class="spaceBtn">
                     <button class="keybordbtn" value="space">space</button>
-                    <button class="keybordbtn effacer" value="delete"><----</button>
+                    <button class="keybordbtn effacer" value="delete" display="none"><----</button>
                 </div>
             </div>
         </div>

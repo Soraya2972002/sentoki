@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/mentor.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style2.css"%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <title>Mentor</title>
 </head>
 <body>
@@ -65,21 +67,23 @@
         </div>
        
         <div class="profil_container font_Poppins">
-         <{% for user in users %}
-         <div class="profil">
-            <div class="profil_img">
-                <img src="media/{{user.image}}" alt="blabla">
-            </div>
-            <div class="profile_btn">
-                <h3>{{user.username}}</h3>
-                <form method="POST" action="/chat"  name = 'submit'>
-                    {% csrf_token %}
-                    <button type="submit" value = '{{instance.id}}' class = "filtrBtn" name = 'submit_button'>Connect</button>
-                </form>
-            </div>
-            {% endfor %}
-
-        </div>
+          <!--first culumn-->
+          {% for instance in users %}
+          <div class="profil">
+              <div class="profil_img">
+                  <img src="media/{{instance.image}}" alt="profile picture">
+              </div>
+              <div class="profile_btn">
+                  <h3>{{instance.username }}</h3>
+                  <form method="POST" action="/chat"  name = 'submit'>
+                      {% csrf_token %}
+                      <button type="submit" value = '{{instance.id}}' class = "filtrBtn" name = 'submit_button'>Connect</button>
+                  </form>
+              </div>
+              
+          </div>
+          {% endfor %}
+      </div>
 
 
 
