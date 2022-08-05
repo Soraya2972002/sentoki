@@ -10,4 +10,12 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-
+      - name: Build & push Docker image
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: 2972002/getting-started
+          tags: v1, latest
+          registry: registry-url.io
+          dockerfile: Dockerfile.ci
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
