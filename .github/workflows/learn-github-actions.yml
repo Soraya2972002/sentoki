@@ -11,8 +11,6 @@ jobs:
         name: Build & push Docker image
         with:
           image: 2972002/github_actions
-          tags: v1, latest
-          registry: registry-url.io
-          dockerfile: Dockerfile.ci
+          registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
